@@ -38,7 +38,23 @@ const resultArr = map(greetings, (item) => {
     return item.toUpperCase()
 })
 
-console.log(resultArr)
-
 // ------------------------------------
+
+const numbers = [4, 5, 6]
+
+function filter(arr, callback) {
+    const newArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (callback(arr[i])) {
+            newArray.push(arr[i])
+        }
+    }
+    return newArray;
+}
+
+const resFilter = filter(numbers, (item) => {
+    return item < 6
+})
+
+console.log(resFilter)
 
