@@ -15,12 +15,30 @@ function find(arr, cb) {
         if (cb(arr[i])) {
             return arr[i]
         }
-    }
-   
+    } 
 }
 
 const result = find(arr, (item, i, arr) => {
     return item > 4
 })
 
-console.log(result)
+// ------------------------
+
+const greetings = ["hi", "hello", "how are you"]; 
+
+function map(arr, cback) {
+    const newArr = []
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(cback(arr[i]))
+    }
+    return newArr
+}
+
+const resultArr = map(greetings, (item) => {
+    return item.toUpperCase()
+})
+
+console.log(resultArr)
+
+// ------------------------------------
+
