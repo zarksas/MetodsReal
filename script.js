@@ -55,6 +55,22 @@ function filter(arr, callback) {
 const resFilter = filter(numbers, (item) => {
     return item < 6
 })
+// ---------------------------------
 
-console.log(resFilter)
+const num = [10, 32, 12];
+
+function reduce(arr, cllb) {
+    let res = 0
+    for (let i = 0; i < arr.length; i++) {
+        res = cllb(arr[i],res)
+    }
+    return res;
+}
+
+
+const resReduce = reduce(num, (item, res) => {
+    return res += item
+})
+
+
 
